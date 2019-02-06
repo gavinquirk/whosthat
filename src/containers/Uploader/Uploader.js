@@ -11,6 +11,8 @@
 import React, { Component } from 'react'
 import axios from '../../axios-persons';
 
+import PersonImage from '../../components/PersonImage/PersonImage'
+
 class Uploader extends Component {
 
   state = {
@@ -20,7 +22,7 @@ class Uploader extends Component {
   }
 
   postPersonHandler = () => {
-    // TODO: Post request to firebase with new person data
+    // TODO: Grab ownerId from login and imageURL from state (after image is uploaded to uploadcare)
     console.log('Submitting new person')
     const person = {
       ownerId: this.state.ownerId,
@@ -37,6 +39,10 @@ class Uploader extends Component {
 
     return (
       <>
+        <PersonImage />
+        <div className="uploadControls">
+          {/* TODO: Component will contain uploadcare widget, controls and final submission for new person */}
+        </div>
         <button onClick={this.postPersonHandler}>TEST SUBMIT</button>
       </>
     )
