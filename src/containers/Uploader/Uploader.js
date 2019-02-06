@@ -9,19 +9,28 @@
 
 
 import React, { Component } from 'react'
-import axios from 'axios';
+import axios from '../../axios-persons';
 
 class Uploader extends Component {
 
   state = {
-    owner: 'currentUser',
-    image: 'https://d279m997dpfwgl.cloudfront.net/wp/2018/07/0725_ross01-1000x652.jpg',
-    comments: null
+    ownerId: 'currentUser',
+    imageURL: 'https://d279m997dpfwgl.cloudfront.net/wp/2018/07/0725_ross01-1000x652.jpg',
+    // comments: null
   }
 
   postPersonHandler = () => {
     // TODO: Post request to firebase with new person data
     console.log('Submitting new person')
+    const person = {
+      ownerId: this.state.ownerId,
+      imageURL: this.state.imageURL,
+      // comments:
+    }
+
+    axios.post('/persons.json', person)
+      .then(response => console.log(response))
+      .catch(error => console.log(error))
   }
 
   render () {
