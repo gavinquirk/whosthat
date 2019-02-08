@@ -12,6 +12,7 @@ import React, { Component } from 'react'
 import axios from '../../axios-persons';
 
 import PersonImage from '../../components/PersonImage/PersonImage'
+import UploaderControls from '../../components/UploaderControls/UploaderControls'
 
 class Uploader extends Component {
 
@@ -40,10 +41,9 @@ class Uploader extends Component {
     return (
       <>
         <PersonImage />
-        <div className="uploadControls">
-          {/* TODO: Component will contain uploadcare widget, controls and final submission for new person */}
-        </div>
-        <button onClick={this.postPersonHandler}>TEST SUBMIT</button>
+        <UploaderControls
+          postPersonHandler={this.postPersonHandler}
+        />
       </>
     )
 

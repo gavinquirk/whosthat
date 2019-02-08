@@ -1,0 +1,12 @@
+.PersonImage {
+
+  /* text-align: center; */
+
+
+  grid-column: 1 / -1;
+}
+
+.PersonImage img {
+  display: block;
+  margin: 0 auto;
+}
