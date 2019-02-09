@@ -39,6 +39,8 @@ class UploaderControls extends Component {
     }
   }
 
+
+
   render () {
 
     const enabledQuestions = this.state.enabledQuestions.map(question =>
@@ -49,20 +51,23 @@ class UploaderControls extends Component {
       <button className={classes.questionBtn} onClick={this.toggleSelectionHandler}>{question.valueOf()}</button>
     )
 
+    
+    // TODO: Fade out/in for toggled selections
 
     return (
       <div className={classes.UploaderControls}>
         {/* <h3 style={{textAlign: 'center'}}>Choose what you would like to ask</h3> */}
-        <div className={classes.enabledQuestions}>
-          {enabledQuestions}
-        </div>
-        <div className={classes.disabledQuestions}>
-          {disabledQuestions}
+        <div className={classes.questionsArea}>
+          <div className={classes.enabledQuestions}>
+            {enabledQuestions}
+          </div>
+          <div className={classes.disabledQuestions}>
+            {disabledQuestions}
+          </div>
         </div>
         {/* <button onClick={this.props.postPersonHandler}>TEST SUBMIT</button> */}
       </div>
     )
-
   }
 }
 

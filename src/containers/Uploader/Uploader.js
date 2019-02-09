@@ -22,12 +22,13 @@ class Uploader extends Component {
     // comments: null
   }
 
-  postPersonHandler = () => {
+  postPersonHandler = (enabledQuestions) => {
     // TODO: Grab ownerId from login and imageURL from state (after image is uploaded to uploadcare)
     console.log('Submitting new person')
     const person = {
       ownerId: this.state.ownerId,
       imageURL: this.state.imageURL,
+      questions: enabledQuestions
       // comments:
     }
 
@@ -40,12 +41,12 @@ class Uploader extends Component {
 
     return (
       <>
-        <PersonImage />
+        {/* <PersonImage />
         <div style={{gridColumn: '1 / -1', textAlign: 'center'}}>
           <button>UPLOADCARE WIDGET</button>
-        </div>
+        </div> */}
         <UploaderControls
-          postPersonHandler={this.postPersonHandler}
+          onPostPerson={this.postPersonHandler}
         />
       </>
     )

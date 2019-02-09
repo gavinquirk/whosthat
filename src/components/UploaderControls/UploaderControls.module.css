@@ -1,17 +1,27 @@
 .UploaderControls {
   grid-column: 2 / 8;
+}
 
+.questionsArea {
   display: flex;
-
   justify-content: space-between;
+  min-height: 20rem;
 }
 
 .enabledQuestions {
+  width: 40%;
   flex-direction: left;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 1px #888888;
 }
 
 .disabledQuestions {
+  width: 40%;
   flex-direction: right;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 1px #888888;
 }
 
 .questionBtn {
