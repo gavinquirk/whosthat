@@ -41,6 +41,9 @@ class Uploader extends Component {
     return (
       <>
         <PersonImage />
+        <div style={{gridColumn: '1 / -1', textAlign: 'center'}}>
+          <button>UPLOADCARE WIDGET</button>
+        </div>
         <UploaderControls
           postPersonHandler={this.postPersonHandler}
         />

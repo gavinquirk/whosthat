@@ -6,7 +6,7 @@ import classes from './PersonImage.module.css';
 const personImage = (props) => (
   <div className={classes.PersonImage}>
     {/* TODO: Cropped and centered person image */}
-    <img src="http://monumentfamilydentistry.com/wp-content/uploads/2015/11/user-placeholder.png" alt="User Placeholder"/>
+    <img src="https://ucarecdn.com/743450a8-40ff-4d6b-8c77-d63d8ea73cd4/ross.jpg" alt="Person"/>
   </div>
 )
 

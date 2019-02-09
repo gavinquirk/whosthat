@@ -1,6 +1,6 @@
 .Navbar {
   font-size: 1.6rem;
-  background-color: orangered;
+  background-color: blue;
 
   grid-column-start: 1;
   grid-column-end: -1;
