@@ -14,21 +14,20 @@ const questions = [
 class Uploader extends Component {
 
   state = {
-    ownerId: 'currentUser',
+    ownerId: 'testUser',
     imageURL: 'https://d279m997dpfwgl.cloudfront.net/wp/2018/07/0725_ross01-1000x652.jpg',
     enabledQuestions: questions,
     disabledQuestions: ["test"]
-    // comments: null
   }
 
-  postPersonHandler = (enabledQuestions) => {
+  postPersonHandler = () => {
     // TODO: Grab ownerId from login and imageURL from state (after image is uploaded to uploadcare)
     console.log('Submitting new person')
     const person = {
       ownerId: this.state.ownerId,
       imageURL: this.state.imageURL,
-      questions: enabledQuestions
-      // comments:
+      questions: this.state.enabledQuestions,
+      comments: []
     }
 
     axios.post('/persons.json', person)
@@ -71,6 +70,7 @@ class Uploader extends Component {
           enabledQuestions={this.state.enabledQuestions}
           disabledQuestions={this.state.disabledQuestions}
         />
+        <button onClick={this.postPersonHandler}>TEST SUBMIT</button>
       </>
     )
 
