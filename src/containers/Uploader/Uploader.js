@@ -3,6 +3,7 @@ import axios from '../../axios-persons';
 
 import PersonImage from '../../components/PersonImage/PersonImage'
 import UploaderControls from '../../components/UploaderControls/UploaderControls'
+import UploadWidget from '../../components/UploadWidget/UploadWidget';
 
 const questions = [
   "What is this persons name?",
@@ -15,7 +16,7 @@ class Uploader extends Component {
 
   state = {
     ownerId: 'testUser',
-    imageURL: 'https://d279m997dpfwgl.cloudfront.net/wp/2018/07/0725_ross01-1000x652.jpg',
+    imageUrl: '',
     enabledQuestions: questions,
     disabledQuestions: ["test"]
   }
@@ -25,7 +26,7 @@ class Uploader extends Component {
     console.log('Submitting new person')
     const person = {
       ownerId: this.state.ownerId,
-      imageURL: this.state.imageURL,
+      imageUrl: this.state.imageUrl,
       questions: this.state.enabledQuestions,
       comments: []
     }
@@ -60,10 +61,16 @@ class Uploader extends Component {
 
     return (
       <>
-        <PersonImage />
+        <PersonImage
+          imageUrl={this.state.imageUrl}
+        />
         <div style={{gridColumn: '1 / -1', textAlign: 'center'}}>
-          <button>UPLOADCARE WIDGET</button>
+        <UploadWidget
+          id='file'
+          name='file'
+          onUploadComplete={info => this.setState({imageUrl: info.cdnUrl})} />
         </div>
+
         <UploaderControls
           onPostPerson={this.postPersonHandler}
           onToggleSelection={this.toggleSelectionHandler}

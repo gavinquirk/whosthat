@@ -27,7 +27,6 @@ class UploaderControls extends Component {
             {disabledQuestions}
           </div>
         </div>
-        {/* <button onClick={this.props.postPersonHandler}>TEST SUBMIT</button> */}
       </div>
     )
   }
