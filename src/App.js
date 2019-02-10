@@ -6,6 +6,7 @@ import './App.css';
 import Layout from './containers/Layout/Layout'
 import Main from './containers/Main/Main'
 import Uploader from './containers/Uploader/Uploader'
+import Person from './containers/Person/Person'
 
 
 // TODO: Container will be used for layout and routing
@@ -17,7 +18,8 @@ class App extends Component {
     let routes = (
       <>
         <Route path="/" exact component={Main} />
-        <Route path="/upload" exact component={Uploader} />
+        <Route path="/upload" component={Uploader} />
+        <Route path="/person" component={Person} />
       </>
     )
 
