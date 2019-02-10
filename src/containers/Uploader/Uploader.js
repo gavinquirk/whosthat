@@ -66,7 +66,7 @@ class Uploader extends Component {
         <PersonImage
           imageUrl={this.state.imageUrl}
         />
-        <div style={{gridColumn: '1 / -1', textAlign: 'center'}}>
+        <div style={{gridColumn: '1 / -1', textAlign: 'center', margin: '3rem'}}>
         <UploadWidget
           id='file'
           name='file'
@@ -79,7 +79,7 @@ class Uploader extends Component {
           enabledQuestions={this.state.enabledQuestions}
           disabledQuestions={this.state.disabledQuestions}
         />
-        <button onClick={this.postPersonHandler}>TEST SUBMIT</button>
+        <button style={{gridColumn: '4 / 6', margin: '0 auto', width: '10rem'}} onClick={this.postPersonHandler}>TEST SUBMIT</button>
       </>
     )
 

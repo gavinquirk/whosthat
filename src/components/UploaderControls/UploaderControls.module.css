@@ -13,7 +13,7 @@
   flex-direction: left;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px 1px #888888;
+  box-shadow: 3px 3px 5px 1px var(--color-primary-dark);
 }
 
 .disabledQuestions {
@@ -21,11 +21,19 @@
   flex-direction: right;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px 1px #888888;
+  box-shadow: 3px 3px 5px 1px var(--color-primary-dark);
+}
+
+.questionsHeader {
+  background-color: var(--color-primary-medium);
+  border-radius: 10px 10px 0 0;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
 .questionBtn {
-  background-color: blue;
+  background-color: var(--color-primary-medium);
   padding: 1rem 2rem;
   cursor: pointer;
   border: none;

@@ -1,3 +1,9 @@
+:root {
+  --color-primary-medium: #0040ff;
+  --color-primary-light: #b3c6ff;
+  --color-primary-dark: #00134d;
+}
+
 *,
 *::before,
 *::after {
@@ -14,8 +20,12 @@ html {
 body {
   font-weight: 300;
   line-height: 1.6;
-  background-color: aliceblue;
+  background-image: linear-gradient(
+    to bottom right, var(--color-primary-light),
+    var(--color-primary-medium),
+    var(--color-primary-dark))
 }
+
 
 
 /* DEFAULT CSS FROM CREATE-REACT-APP */

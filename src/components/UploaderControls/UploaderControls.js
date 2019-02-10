@@ -18,12 +18,13 @@ class UploaderControls extends Component {
 
     return (
       <div className={classes.UploaderControls}>
-        {/* <h3 style={{textAlign: 'center'}}>Choose what you would like to ask</h3> */}
         <div className={classes.questionsArea}>
           <div className={classes.enabledQuestions}>
+            <div className={classes.questionsHeader}><h3>Your Questions</h3></div>
             {enabledQuestions}
           </div>
           <div className={classes.disabledQuestions}>
+            <div className={classes.questionsHeader}><h3>Suggestions</h3></div>
             {disabledQuestions}
           </div>
         </div>
