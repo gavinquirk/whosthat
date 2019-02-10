@@ -5,6 +5,8 @@ import PersonImage from '../../components/PersonImage/PersonImage'
 import UploaderControls from '../../components/UploaderControls/UploaderControls'
 import UploadWidget from '../../components/UploadWidget/UploadWidget';
 
+import placeholderImage from '../../assets/user-placeholder.png'
+
 const questions = [
   "What is this persons name?",
   "What is this persons age?",
@@ -16,7 +18,7 @@ class Uploader extends Component {
 
   state = {
     ownerId: 'testUser',
-    imageUrl: '',
+    imageUrl: placeholderImage,
     enabledQuestions: questions,
     disabledQuestions: ["test"]
   }
