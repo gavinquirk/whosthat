@@ -6,11 +6,11 @@ class UploaderControls extends Component {
   render () {
 
     const enabledQuestions = this.props.enabledQuestions.map(question =>
-      <button className={classes.questionBtn} onClick={this.props.onToggleSelection}>{question.valueOf()}</button>
+      <button className={[classes.questionBtn, classes.newQuestion].join(' ')} onClick={this.props.onToggleSelection}>{question.valueOf()}</button>
     )
 
     const disabledQuestions = this.props.disabledQuestions.map(question =>
-      <button className={classes.questionBtn} onClick={this.props.onToggleSelection}>{question.valueOf()}</button>
+      <button className={[classes.questionBtn, classes.newQuestion].join(' ')} onClick={this.props.onToggleSelection}>{question.valueOf()}</button>
     )
 
     
