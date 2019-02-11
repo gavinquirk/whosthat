@@ -1,0 +1,9 @@
+.PersonList {
+
+  /* TEMP WIDTH */
+  width: 100rem;
+
+  display: flex;
+
+  justify-content: space-between;
+}

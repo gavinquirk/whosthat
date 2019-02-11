@@ -1,0 +1,9 @@
+.PersonBox {
+  width: 25rem;
+
+  cursor: pointer;
+}
+
+.PersonBox img {
+  width: 100%;
+}

@@ -19,7 +19,7 @@ class App extends Component {
       <>
         <Route path="/" exact component={Main} />
         <Route path="/upload" component={Uploader} />
-        <Route path="/person" component={Person} />
+        <Route path="/person/:id" component={Person} />
       </>
     )
 

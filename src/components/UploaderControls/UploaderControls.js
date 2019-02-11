@@ -13,9 +13,6 @@ class UploaderControls extends Component {
       <button className={[classes.questionBtn, classes.newQuestion].join(' ')} onClick={this.props.onToggleSelection}>{question.valueOf()}</button>
     )
 
-    
-    // TODO: Fade out/in for toggled selections
-
     return (
       <div className={classes.UploaderControls}>
         <div className={classes.questionsArea}>
