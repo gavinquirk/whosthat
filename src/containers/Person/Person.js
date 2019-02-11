@@ -12,9 +12,9 @@ class Person extends Component {
   }
 
   componentDidMount () {
-    // TEMP OWNER ID GET REQUEST
-    const ownerId = "testUser"
-    const queryParams = '?orderBy="ownerId"&equalTo="' + ownerId + '"'
+    // Query for person data based on key/id url parameter, set state with data
+    const key=(this.props.match.params.id)
+    const queryParams = '?orderBy="$key"&equalTo="' + key + '"'
     axios.get('/persons.json' + queryParams)
     .then(res => {
       const personData = []
@@ -32,7 +32,6 @@ class Person extends Component {
   }
 
   render () {
-
 
     return (
       <>
