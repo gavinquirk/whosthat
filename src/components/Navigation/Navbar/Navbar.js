@@ -6,6 +6,7 @@ import classes from './Navbar.module.css'
 
 const navbar = (props) => (
   <header className={classes.Navbar}>
+    <div>LOGO</div>
     <NavigationItems />
   </header>
 )

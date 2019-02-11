@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classes from './Main.module.css';
 
 class Main extends Component {
 
@@ -6,7 +7,9 @@ class Main extends Component {
 
     return (
       <>
-        <p>MAIN</p>
+        <div className={classes.Main}>
+          <p>MAIN</p>
+        </div>
       </>
     )
 

@@ -1,0 +1,30 @@
+.NavigationItem {
+  display: flex;
+
+  align-items: center;
+
+  margin: 0 1rem 0 1rem;
+
+
+}
+
+.NavigationItem a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  color: black;
+  border-radius: 10px;
+
+  transition: all 0.3s;
+
+  letter-spacing: 5px;
+
+}
+
+.NavigationItem a:hover {
+  background-color: var(--color-primary-light);
+  color: white;
+  box-shadow: 3px 3px 5px 1px lightgray;
+  transform: scale(1.1)
+}
