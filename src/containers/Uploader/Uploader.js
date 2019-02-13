@@ -7,6 +7,8 @@ import UploadWidget from '../../components/UploadWidget/UploadWidget';
 
 import placeholderImage from '../../assets/user-placeholder.png'
 
+import classes from './Uploader.module.css'
+
 const questions = [
   "What is this persons name?",
   "What is this persons age?",
@@ -34,7 +36,8 @@ class Uploader extends Component {
     }
 
     axios.post('/persons.json', person)
-      .then(response => console.log(response))
+      .then(response => this.props.history.push('/person/' + response.data.name))
+      // .then(response => console.log(response.data.name))
       .catch(error => console.log(error))
   }
 
@@ -79,7 +82,7 @@ class Uploader extends Component {
           enabledQuestions={this.state.enabledQuestions}
           disabledQuestions={this.state.disabledQuestions}
         />
-        <button style={{gridColumn: '4 / 6', margin: '0 auto', width: '10rem'}} onClick={this.postPersonHandler}>TEST SUBMIT</button>
+        <button className={classes.SubBtn} onClick={this.postPersonHandler}>Submit</button>
       </>
     )
 

@@ -1,0 +1,12 @@
+
+.SubBtn {
+  grid-column: 4 / 6;
+  /* margin: 0 auto; */
+  padding: 3rem 5rem;
+  background-color: var(--color-primary-medium);
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  color: white;
+}
