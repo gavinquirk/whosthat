@@ -7,6 +7,7 @@ import Layout from './containers/Layout/Layout'
 import Main from './containers/Main/Main'
 import Uploader from './containers/Uploader/Uploader'
 import Person from './containers/Person/Person'
+import Auth from './containers/Auth/Auth'
 
 
 // TODO: Container will be used for layout and routing
@@ -20,6 +21,7 @@ class App extends Component {
         <Route path="/" exact component={Main} />
         <Route path="/upload" component={Uploader} />
         <Route path="/person/:id" component={Person} />
+        <Route path="/auth" component={Auth} />
       </>
     )
 
